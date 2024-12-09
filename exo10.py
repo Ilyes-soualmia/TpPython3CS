@@ -2,9 +2,9 @@
 # Easy way to check if a word is a palindrome
 def PalindromeAdvanced (word):
     if word == word[::-1]:
-        return True
+        print("Yes, it's a palindrome.")
     else:
-        return False
+        print("No, it's not a palindrome.")
 
 #normal way
 def Palindrome (word):
@@ -14,20 +14,14 @@ def Palindrome (word):
         if word[j] == word[i - j]:
             j += 1
         else:
-            return False
-    return True
+            print("No, it's not a palindrome.")
+            return
+    print("Yes, it's a palindrome.")
     
 word = input("Please type in a word: ")
 
-if Palindrome(word):
-    print("Yes, it's a palindrome.")
-else:
-    print("No, it's not a palindrome.")
-
+Palindrome(word)
 
 """
-if PalindromeAdvanced(word):
-    print("Yes, it's a palindrome.")
-else:
-    print("No, it's not a palindrome.")
+PalindromeAdvanced(word)
 """
