@@ -10,5 +10,6 @@ while True:
             counter += 1
         Cities.update({city: counter*1_000_000})
         counter = 0    
- 
+#sort by value
+Cities = sorted(Cities.items() , key=lambda x: x[1]) 
 print(Cities)
